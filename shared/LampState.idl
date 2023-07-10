@@ -1,0 +1,7 @@
+struct LampState
+{
+  @key string<16> LampID;
+
+   boolean on;
+};
+
