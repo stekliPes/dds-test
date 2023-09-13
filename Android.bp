@@ -1,0 +1,14 @@
+cc_binary  {
+    name: "lugy_dds_test",
+    srcs: [
+        "*.cxx",
+        "shared/*.cxx
+    ],
+    local_include_dirs: [
+        "shared"
+    ],
+    rtti: true,
+    shared_libs: [
+        "fastDDS"
+    ]
+}
