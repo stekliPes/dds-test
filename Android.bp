@@ -1,7 +1,24 @@
 cc_binary  {
-    name: "lugy_dds_test",
+    name: "dds_test_lampstate-sender",
     srcs: [
-        "*.cxx",
+        "LampStateSender.cxx",
+        "StateSenderMain.cxx",
+        "shared/*.cxx
+    ],
+    local_include_dirs: [
+        "shared"
+    ],
+    rtti: true,
+    shared_libs: [
+        "fastDDS"
+    ]
+}
+
+cc_binary  {
+    name: "dds_test_lampstate-receiver",
+    srcs: [
+        "LampStateReceiver.cxx",
+        "StateReceiverMain.cxx",
         "shared/*.cxx
     ],
     local_include_dirs: [
