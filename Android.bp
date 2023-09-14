@@ -3,7 +3,7 @@ cc_binary  {
     srcs: [
         "LampStateSender.cxx",
         "StateSenderMain.cxx",
-        "shared/*.cxx
+        "shared/*.cxx"
     ],
     local_include_dirs: [
         "shared"
@@ -19,7 +19,7 @@ cc_binary  {
     srcs: [
         "LampStateReceiver.cxx",
         "StateReceiverMain.cxx",
-        "shared/*.cxx
+        "shared/*.cxx"
     ],
     local_include_dirs: [
         "shared"

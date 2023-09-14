@@ -25,8 +25,6 @@
 
 #include <fastdds/dds/core/policy/QosPolicies.hpp>
 #include <fastdds/dds/topic/TopicDataType.hpp>
-#include <fastdds/rtps/common/InstanceHandle.h>
-#include <fastdds/rtps/common/SerializedPayload.h>
 #include <fastrtps/utils/md5.h>
 
 #include "LampState.h"
@@ -50,7 +48,7 @@ public:
 
     eProsima_user_DllExport LampStatePubSubType();
 
-    eProsima_user_DllExport ~LampStatePubSubType() override;
+    eProsima_user_DllExport virtual ~LampStatePubSubType() override;
 
     eProsima_user_DllExport bool serialize(
             void* data,
@@ -71,7 +69,8 @@ public:
     eProsima_user_DllExport std::function<uint32_t()> getSerializedSizeProvider(
             void* data) override
     {
-        return getSerializedSizeProvider(data, eprosima::fastdds::dds::DEFAULT_DATA_REPRESENTATION);
+        return getSerializedSizeProvider(data,
+                eprosima::fastdds::dds::DEFAULT_DATA_REPRESENTATION);
     }
 
     eProsima_user_DllExport std::function<uint32_t()> getSerializedSizeProvider(
@@ -108,7 +107,7 @@ public:
     eProsima_user_DllExport inline bool construct_sample(
             void* memory) const override
     {
-        static_cast<void>(memory);
+                (void)memory;
         return false;
     }
 

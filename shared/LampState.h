@@ -22,17 +22,16 @@
 #ifndef _FAST_DDS_GENERATED_LAMPSTATE_H_
 #define _FAST_DDS_GENERATED_LAMPSTATE_H_
 
-#include <array>
-#include <bitset>
-#include <cstdint>
-#include <map>
-#include <string>
-#include <vector>
 
 #include <fastcdr/cdr/fixed_size_string.hpp>
 #include <fastcdr/xcdr/optional.hpp>
 
-
+#include <stdint.h>
+#include <array>
+#include <string>
+#include <vector>
+#include <map>
+#include <bitset>
 
 #if defined(_WIN32)
 #if defined(EPROSIMA_USER_DLL_EXPORT)
@@ -173,10 +172,16 @@ public:
      */
     eProsima_user_DllExport bool& on();
 
+
+
+
 private:
 
-    eprosima::fastcdr::fixed_string<16> m_LampID;
-    bool m_on{false};
+    eprosima::fastcdr::fixed_string<16> m_LampID
+    ;
+    bool m_on
+    {false}
+    ;
 
 };
 

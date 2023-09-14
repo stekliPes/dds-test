@@ -24,8 +24,8 @@
 
 #include "LampState.h"
 
-constexpr uint32_t LampState_max_cdr_typesize {26UL};
-constexpr uint32_t LampState_max_key_cdr_typesize {21UL};
+            constexpr uint32_t LampState_max_cdr_typesize {26UL};
+            constexpr uint32_t LampState_max_key_cdr_typesize {21UL};
 
 
 namespace eprosima {
