@@ -10,8 +10,15 @@ cc_binary  {
     ],
     rtti: true,
     shared_libs: [
-        "fastDDS"
-    ]
+        "fastDDS",
+	"fastCDR",
+	"foonathan_memory"
+    ],
+    cflags: [
+        "-fexceptions",
+        "-frtti",
+        "-Wno-non-virtual-dtor"
+    ],
 }
 
 cc_binary  {
@@ -26,6 +33,13 @@ cc_binary  {
     ],
     rtti: true,
     shared_libs: [
-        "fastDDS"
-    ]
+        "fastDDS",
+        "fastCDR",
+        "foonathan_memory"
+    ],
+    cflags: [
+        "-fexceptions",
+        "-frtti",
+        "-Wno-non-virtual-dtor"
+    ],
 }
